@@ -10,7 +10,7 @@ jobs:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: List and Read files
+            - name: List and all Read files
               run: |
                 echo "My first GitHub Actions Job"
                 ls -1
