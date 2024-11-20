@@ -11,13 +11,13 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Docker Build 
-      run: docker build -t docker.io/amraff/resume-app:latest .
+      run: docker build -t docker.io/amraff/raff-resume-app:latest .
 
     - name: Docker Login
       run: docker login --username=amraff --password=Morelovesweetmom@1
 
     - name: Docker Publish 
-      run: docker push docker.io/amraff/resume-app:latest
+      run: docker push docker.io/amraff/raff-raff-resume-app:latest
 
   docker_deploy:
     needs: docker_build
@@ -28,4 +28,4 @@ jobs:
       - name: Docker Login
         run: docker login --username=amraff --password=Morelovesweetmom@1
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker.io/amraff/resume-app:latest
+        run: docker run -d -p 8080:80 docker.io/amraff/raff-resume-app:latest
